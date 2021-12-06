@@ -6,6 +6,8 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.aakash.databindingtest.swipeViewpager.SwipeTestActivity;
+import com.aakash.databindingtest.ytplayer.YoutubeVideoPlayer;
 import com.google.android.exoplayer2.MediaItem;
 import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.ui.PlayerView;
@@ -87,5 +89,15 @@ player.play();
     public void CustomVideoPlayer(View view) {
         releasePlayer();
         startActivity(new Intent(getApplicationContext(), CustomMediaPlayerActivity.class));
+    }
+
+    public void YTPlayer(View view) {
+        releasePlayer();
+        startActivity(new Intent(getApplicationContext(), YoutubeVideoPlayer.class));
+    }
+
+    public void swipeTestClic(View view) {
+        releasePlayer();
+        startActivity(new Intent(getApplicationContext(), SwipeTestActivity.class));
     }
 }

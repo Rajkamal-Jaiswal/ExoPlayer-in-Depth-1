@@ -32,8 +32,9 @@ public class CustomMediaPlayerActivity extends AppCompatActivity {
     String url1 = "https://5b44cf20b0388.streamlock.net:8443/vod/smil:bbb.smil/playlist.m3u8";
     String url2="https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8";
     String url3="https://multiplatform-f.akamaihd.net/i/multi/april11/sintel/sintel-hd_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,.mp4.csmil/master.m3u8";
-    String url4="http://d3rlna7iyyu8wu.cloudfront.net/skip_armstrong/skip_armstrong_stereo_subs.m3u8";
-    String url5="https://livesim.dashif.org/livesim/chunkdur_1/ato_7/testpic4_8s/Manifest.mpd";
+    String url5="http://d3rlna7iyyu8wu.cloudfront.net/skip_armstrong/skip_armstrong_stereo_subs.m3u8";
+    String url4="https://livesim.dashif.org/livesim/chunkdur_1/ato_7/testpic4_8s/Manifest.mpd";
+//    String url5="https://www.youtube.com/watch?v=RgzLnmTaCAU";
     PlayerView playerView;
     SimpleExoPlayer simpleExoPlayer;
 
@@ -146,17 +147,10 @@ public class CustomMediaPlayerActivity extends AppCompatActivity {
 
                 long num = simpleExoPlayer.getCurrentPosition() - 10000;
                 if (num < 0) {
-
                     simpleExoPlayer.seekTo(0);
-
-
                 } else {
-
                     simpleExoPlayer.seekTo(simpleExoPlayer.getCurrentPosition() - 10000);
-
                 }
-
-
             }
         });
 
@@ -266,6 +260,8 @@ public class CustomMediaPlayerActivity extends AppCompatActivity {
     public void onStop() {
         super.onStop();
         releasePlayer();
+
+
     }
 
 
